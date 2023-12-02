@@ -1,0 +1,4315 @@
+{
+	"info": {
+		"_postman_id": "5435a187-5ad7-4717-9733-a367b9fae41d",
+		"name": "Gramlok API Documentation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16903062",
+		"_collection_link": "https://cptt-develope.postman.co/workspace/LULUGRAM~5d529d20-e6d9-4f2b-851d-64b774bdb307/collection/16903062-5435a187-5ad7-4717-9733-a367b9fae41d?action=share&source=collection_link&creator=16903062"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\":\"benser123\",\n    \"userId\":\"8681910095\",\n    \"password\":\"kalvin123\",\n    \"confirmPassword\":\"kalvin123\",\n    \"gender\":\"Male\",\n    \"dob\":\"1995-12-17\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gramlok}}/auth/signup",
+							"host": [
+								"{{gramlok}}"
+							],
+							"path": [
+								"auth",
+								"signup"
+							]
+						},
+						"description": "## **This is signup api for gramlok.**\n\n### Request Body:\n\n1).userName=>string\n\n2).userId=>string(must be email or phone number)\n\n3).password=>string\n\n4).confirmPassword=>string(password and confirmPassword must be string)\n\n5).gender=> string(Male or Female or Other)\n\n6).dob=>date(ex:YYYY-MM-DD)"
+					},
+					"response": [
+						{
+							"name": "SuccessResponse",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"userName\":\"kalvin\",\n    \"userId\":\"kalvinbenser369@gmail.com\",\n    \"password\":\"kalvin@123\",\n    \"confirmPassword\":\"kalvin@123\",\n    \"gender\":\"Male\",\n    \"dob\":\"1995-12-17\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{gramlok}}/auth/signup",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:5000"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "86"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"56-yx4x7TBYHkbqE8H3Z4x8vpvANDw\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 17 Aug 2023 03:48:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"user_name\": \"kalvin\",\n            \"user_id\": \"kalvinbenser369@gmail.com\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "ErrorResponse",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"userName\":\"kalvin\",\n    \"userId\":\"kalvinbenser369@gmail.com\",\n    \"password\":\"kalvin@123\",\n    \"confirmPassword\":\"kalvin@123\",\n    \"gender\":\"Male\",\n    \"dob\":\"1995-12-17\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{gramlok}}/auth/signup",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:5000"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "135"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"87-/T0Gtu9O+0B5z+BUXeTy7y0MhOg\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 17 Aug 2023 04:23:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"errors\": {\n        \"numError\": 1,\n        \"userName\": \"\",\n        \"userId\": \"Empty userId\",\n        \"password\": \"\",\n        \"confirmPassword\": \"\",\n        \"gender\": \"\",\n        \"dob\": \"\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\":\"kalvinbenser1@gmail.com\",\n    \"password\":\"kalvin123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gramlok}}/auth/signin",
+							"host": [
+								"{{gramlok}}"
+							],
+							"path": [
+								"auth",
+								"signin"
+							]
+						},
+						"description": "## This is signin api for gramlok.\n\n**Request Body:**\n\n1).userId=>string(email or phone number)\n\n2).password=>string"
+					},
+					"response": [
+						{
+							"name": "SuccessResponse",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"userId\":\"kalvinbenser1@gmail.com\",\n    \"password\":\"kalvin@123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{gramlok}}/auth/signin",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:5000"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "r_t=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZjMTM2N2NmLTdiNzktNDdmNS04MWUyLThiYWYxNjEwOTdlZCIsIm5hbWUiOiJrYWx2aW4iLCJpYXQiOjE2OTIyNDM3OTUsImV4cCI6MTY5MjYwMzc5NX0.UVK032Eg32rZseHjQjH4R1YavU2RUDWZZ16C0uujBpA; Max-Age=360000; Path=/; Expires=Mon, 21 Aug 2023 07:43:15 GMT; HttpOnly"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1229"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4cd-hbBloWIpRwjMqxRrLLN8lJ1SsdQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 17 Aug 2023 03:43:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"a_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImZjMTM2N2NmLTdiNzktNDdmNS04MWUyLThiYWYxNjEwOTdlZCIsIm5hbWUiOiJrYWx2aW4iLCJpYXQiOjE2OTIyNDM3OTUsImV4cCI6MTY5MjI0NTU5NX0.RPYtzEGmSS-_dQpMig8lfkdDl5Ahk65_FbcNQ_1gQec\",\n    \"userName\": \"kalvin\",\n    \"userId\": \"kalvinbenser1@gmail.com\",\n    \"userUid\": \"fc1367cf-7b79-47f5-81e2-8baf161097ed\",\n    \"userIdType\": \"email\",\n    \"userIdVerified\": false,\n    \"userEmail\": \"kalvinbenser1@gmail.com\",\n    \"userPhone\": \"\",\n    \"userGender\": \"M\",\n    \"userDob\": \"1995-12-16T18:30:00.000Z\",\n    \"coverPic\": null,\n    \"profilePic\": null,\n    \"coverPicCaption\": null,\n    \"profilePicCaption\": null,\n    \"privacyPhone\": \"PRIVATE\",\n    \"privacyEmail\": \"PRIVATE\",\n    \"privacyGender\": \"PUBLIC\",\n    \"privacyDob\": \"PRIVATE\",\n    \"address\": {\n        \"data\": {\n            \"pin\": \"\",\n            \"city\": \"\",\n            \"state\": \"\",\n            \"country\": \"Bharat\",\n            \"district\": \"\",\n            \"local_address\": \"\"\n        },\n        \"privacy\": \"PRIVATE\"\n    },\n    \"relatives\": {\n        \"data\": {\n            \"father\": \"\",\n            \"mother\": \"\",\n            \"fathers_father\": \"\",\n            \"fathers_mother\": \"\",\n            \"mothers_father\": \"\",\n            \"mothers_mother\": \"\",\n            \"other_relatives\": []\n        },\n        \"privacy\": \"PRIVATE\"\n    },\n    \"myself\": {\n        \"data\": {\n            \"about_me\": \"\",\n            \"my_hobbies\": \"\",\n            \"my_aspirations\": \"\"\n        },\n        \"privacy\": \"PRIVATE\"\n    },\n    \"profession\": {\n        \"data\": {\n            \"work_experiences\": [],\n            \"about_my_profession\": \"\"\n        },\n        \"privacy\": \"PRIVATE\"\n    },\n    \"education\": {\n        \"data\": {\n            \"edu_list\": []\n        },\n        \"privacy\": \"PRIVATE\"\n    },\n    \"privacyEntities\": \"PRIVATE\"\n}"
+						},
+						{
+							"name": "ErrorResponse",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"userId\":\"kalvinbenser1455@gmail.com\",\n    \"password\":\"kalvin@123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{gramlok}}/auth/signin",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:5000"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "98"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"62-T3VbIejhHc0HGdUksvKArqE8QpY\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 17 Aug 2023 04:21:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"errors\": {\n        \"message\": \"Invalid credentials\",\n        \"userId\": \"kalvinbenser1455@gmail.com\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "forgot_password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\":\"kalvinbenser369@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gramlok}}/auth/forgot_password",
+							"host": [
+								"{{gramlok}}"
+							],
+							"path": [
+								"auth",
+								"forgot_password"
+							]
+						},
+						"description": "## This is Forgot Password api for gramlok\n\n**Request Body:**\n\nuserId=>string(Email or Phone number)"
+					},
+					"response": [
+						{
+							"name": "ErrorResponse",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"userId\":\"kalvinbenser1@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{gramlok}}/auth/forgot_password",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"auth",
+										"forgot_password"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:5000"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "37"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"25-GgaVhntYazB/MPzwqX72WRtisKI\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 17 Aug 2023 04:03:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"Invalid\"\n}"
+						},
+						{
+							"name": "SuccessResponse",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"userId\":\"kalvinbenser369@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{gramlok}}/auth/forgot_password",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"auth",
+										"forgot_password"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:5000"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "602"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"25a-/EenWbD0+qte+77AagIc6VwXe0U\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 17 Aug 2023 04:20:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"info\": {\n        \"accepted\": [\n            \"kalvinbenser369@gmail.com\"\n        ],\n        \"rejected\": [],\n        \"envelopeTime\": 274,\n        \"messageTime\": 613,\n        \"messageSize\": 344,\n        \"response\": \"250 Message received\",\n        \"envelope\": {\n            \"from\": \"hemantjha@zohomail.in\",\n            \"to\": [\n                \"kalvinbenser369@gmail.com\"\n            ]\n        },\n        \"messageId\": \"<cb3bfbed-76d4-88f7-bb06-972ff863620f@zohomail.in>\"\n    },\n    \"message\": \"OTP sent to your email/mobile\",\n    \"otpToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUxZjg2MWFjLTNmNzAtNDczNS04YTc4LTNjMjkxZjMxMTRjMSIsImlhdCI6MTY5MjI0NjA1NCwiZXhwIjoxNjkyMjQ3ODU0fQ.D5m28r-zrqLpn7QI40lGrlcxnMZ6KRxpb_n9LWyeXsY\",\n    \"uuid\": \"51f861ac-3f70-4735-8a78-3c291f3114c1\"\n}"
+						}
+					]
+				},
+				{
+					"name": "forgot_password/change",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"otp\":49704503,\n    \"password\":\"Space369@\",\n    \"confirmPassword\":\"Space369@\",\n    \"otpToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU2ZjY2NzhkLWJhZWYtNGRlNC04NDMyLTBhNDU0ODE4YzIxYyIsImlhdCI6MTY5NDE0NjA4NSwiZXhwIjoxNjk0MTQ3ODg1fQ.NfuY-6kcu9riKKaF2R7ItPrlEF9cyeQA0KdqNbxm0dY\",\n    \"uuid\":\"e6f6678d-baef-4de4-8432-0a454818c21c\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gramlok}}/auth/forgot_password/change",
+							"host": [
+								"{{gramlok}}"
+							],
+							"path": [
+								"auth",
+								"forgot_password",
+								"change"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "SuccessResponse",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"otp\":32572657,\n    \"password\":\"Space369@\",\n    \"confirmPassword\":\"Space369@\",\n    \"otpToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUxZjg2MWFjLTNmNzAtNDczNS04YTc4LTNjMjkxZjMxMTRjMSIsImlhdCI6MTY5MjI0NjA1NCwiZXhwIjoxNjkyMjQ3ODU0fQ.D5m28r-zrqLpn7QI40lGrlcxnMZ6KRxpb_n9LWyeXsY\",\n    \"uuid\":\"51f861ac-3f70-4735-8a78-3c291f3114c1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{gramlok}}/auth/forgot_password/change",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"auth",
+										"forgot_password",
+										"change"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:5000"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "84"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"54-aI74ZrsVNlS5pXZaatTGxbJAXq8\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 17 Aug 2023 04:31:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"user_id\": \"kalvinbenser369@gmail.com\",\n        \"user_name\": \"kalvin\"\n    }\n}"
+						},
+						{
+							"name": "ErrorResponse",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"otp\":32572657,\n    \"password\":\"Space369@\",\n    \"confirmPassword\":\"Space369@\",\n    \"otpToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUxZjg2MWFjLTNmNzAtNDczNS04YTc4LTNjMjkxZjMxMTRjMSIsImlhdCI6MTY5MjI0NjA1NCwiZXhwIjoxNjkyMjQ3ODU0fQ.D5m28r-zrqLpn7QI40lGrlcMZ6KRxpb_n9LWyeXsY\",\n    \"uuid\":\"51f861ac-3f70-4735-8a78-3c291f3114c1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{gramlok}}/auth/forgot_password/change",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"auth",
+										"forgot_password",
+										"change"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:5000"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "79"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4f-VJ3w0bBmSeGbPMgzFixRN9Htt3E\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 17 Aug 2023 04:31:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"Invalid otp signature\",\n    \"error_code\": \"INVALID_DATA\"\n}"
+						}
+					]
+				},
+				{
+					"name": "password_change",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUxZjg2MWFjLTNmNzAtNDczNS04YTc4LTNjMjkxZjMxMTRjMSIsIm5hbWUiOiJrYWx2aW4iLCJpYXQiOjE2OTIyNTE0MjEsImV4cCI6MTY5MjI1MzIyMX0.NSS2ykY_xdF2vKzVXQduE08NxSUR5xQwYpNMbP3sHSM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"oldPassword\":\"Kalvin@123\",\n    \"password\":\"kalvin123\",\n    \"confirmPassword\":\"kalvin123\",\n    \"uuid\":\"51f861ac-3f70-4735-8a78-3c291f3114c1\",\n    \"auth\":{\n     \"userId\":\"kalvinbenser369@gmail.com\",   \n     \"userUid\":\"51f861ac-3f70-4735-8a78-3c291f3114c1\",\n     \"userName\":\"kalvin\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gramlok}}/auth/password_change",
+							"host": [
+								"{{gramlok}}"
+							],
+							"path": [
+								"auth",
+								"password_change"
+							]
+						},
+						"description": "IMPORTANT NOTES:\n\nin front end, when we called api , in request body auth is not required. it automattically give by backend. when we test api in postman. we must put auth object.\n\n**Request:**\n\n1).oldPassword=>string(must be old password)\n\n2).password=>string\n\n3).confirmPassword=>string(must be same password and confirm password)\n\n4).uuid=>string(user unique id)\n\nHeaders=>Authorization=>bearer token=>Put your token"
+					},
+					"response": [
+						{
+							"name": "ErrorResponse",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"oldPassword\":\"Space369@\",\n    \"password\":\"kalvin123\",\n    \"confirmPassword\":\"kalvin123\",\n    \"auth\":{\n     \"userUid\":\"51f861ac-3f70-4735-8a78-3c291f3114c1\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{gramlok}}/auth/password_change",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"auth",
+										"password_change"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:5000"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "83"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"53-NN6ptkDVo0q6dSJ+tUs4pS0ihH8\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 17 Aug 2023 04:41:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"Invalid userUid: internal\",\n    \"error_code\": \"INVALID_DATA\"\n}"
+						},
+						{
+							"name": "SuccessResponse",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"oldPassword\":\"Kalvin@123\",\n    \"password\":\"kalvin123\",\n    \"confirmPassword\":\"kalvin123\",\n    \"uuid\":\"51f861ac-3f70-4735-8a78-3c291f3114c1\",\n    \"auth\":{\n     \"userId\":\"kalvinbenser369@gmail.com\",   \n     \"userUid\":\"51f861ac-3f70-4735-8a78-3c291f3114c1\",\n     \"userName\":\"kalvin\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{gramlok}}/auth/password_change",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"auth",
+										"password_change"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:5000"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "84"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"54-aI74ZrsVNlS5pXZaatTGxbJAXq8\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 17 Aug 2023 05:54:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"user_id\": \"kalvinbenser369@gmail.com\",\n        \"user_name\": \"kalvin\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "user_status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUxZjg2MWFjLTNmNzAtNDczNS04YTc4LTNjMjkxZjMxMTRjMSIsIm5hbWUiOiJrYWx2aW4iLCJpYXQiOjE2OTI3NjYwNTAsImV4cCI6MTY5Mjc2Nzg1MH0.f5cKdggmXBhaV-a9FgucZTA_Zeve9MjiZXR225UBxUg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{gramlok}}/auth/user_status",
+							"host": [
+								"{{gramlok}}"
+							],
+							"path": [
+								"auth",
+								"user_status"
+							]
+						},
+						"description": "this user_status api is return current user data.\n\n**Request:**\n\nHeaders=>Authorization=>bearer token=>Put your token"
+					},
+					"response": [
+						{
+							"name": "SuccessResponse",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{gramlok}}/auth/user_status",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"auth",
+										"user_status"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:5000"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1325"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"52d-QEH9JM6zpZVkJG+WGVViV6qGTJo\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 17 Aug 2023 06:07:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"a_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUxZjg2MWFjLTNmNzAtNDczNS04YTc4LTNjMjkxZjMxMTRjMSIsIm5hbWUiOiJrYWx2aW4iLCJpYXQiOjE2OTIyNTI0NTEsImV4cCI6MTY5MjI1MzM1MX0.yGHP6n3YRgFW3eLJAxokOKBGG5-vnFD8ZOs5e3If1bw\",\n    \"userName\": \"kalvin\",\n    \"userUid\": \"51f861ac-3f70-4735-8a78-3c291f3114c1\",\n    \"data\": {\n        \"uid\": \"51f861ac-3f70-4735-8a78-3c291f3114c1\",\n        \"user_name\": \"kalvin\",\n        \"user_email\": \"kalvinbenser369@gmail.com\",\n        \"user_phone\": \"\",\n        \"user_id\": \"kalvinbenser369@gmail.com\",\n        \"user_id_type\": \"email\",\n        \"user_id_verified\": false,\n        \"sex\": \"M\",\n        \"date_of_birth\": \"1995-12-16T18:30:00.000Z\",\n        \"profile_pic\": null,\n        \"cover_pic\": null,\n        \"cover_pic_caption\": null,\n        \"profile_pic_caption\": null,\n        \"privacy_phone\": \"PRIVATE\",\n        \"privacy_email\": \"PRIVATE\",\n        \"privacy_dob\": \"PRIVATE\",\n        \"privacy_gender\": \"PUBLIC\",\n        \"relatives\": {\n            \"data\": {\n                \"father\": \"\",\n                \"mother\": \"\",\n                \"fathers_father\": \"\",\n                \"fathers_mother\": \"\",\n                \"mothers_father\": \"\",\n                \"mothers_mother\": \"\",\n                \"other_relatives\": []\n            },\n            \"privacy\": \"PRIVATE\"\n        },\n        \"address\": {\n            \"data\": {\n                \"pin\": \"\",\n                \"city\": \"\",\n                \"state\": \"\",\n                \"country\": \"Bharat\",\n                \"district\": \"\",\n                \"local_address\": \"\"\n            },\n            \"privacy\": \"PRIVATE\"\n        },\n        \"myself\": {\n            \"data\": {\n                \"about_me\": \"\",\n                \"my_hobbies\": \"\",\n                \"my_aspirations\": \"\"\n            },\n            \"privacy\": \"PRIVATE\"\n        },\n        \"profession\": {\n            \"data\": {\n                \"work_experiences\": [],\n                \"about_my_profession\": \"\"\n            },\n            \"privacy\": \"PRIVATE\"\n        },\n        \"education\": {\n            \"data\": {\n                \"edu_list\": []\n            },\n            \"privacy\": \"PRIVATE\"\n        },\n        \"privacy_entities\": \"PRIVATE\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "signout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUxZjg2MWFjLTNmNzAtNDczNS04YTc4LTNjMjkxZjMxMTRjMSIsIm5hbWUiOiJrYWx2aW4iLCJpYXQiOjE2OTIyNTE0MjEsImV4cCI6MTY5MjI1MzIyMX0.NSS2ykY_xdF2vKzVXQduE08NxSUR5xQwYpNMbP3sHSM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{gramlok}}/auth/signout",
+							"host": [
+								"{{gramlok}}"
+							],
+							"path": [
+								"auth",
+								"signout"
+							]
+						},
+						"description": "**Request:**\n\nHeaders=>Authorization=>bearer token=>Put your token"
+					},
+					"response": [
+						{
+							"name": "SuccessResponse",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{gramlok}}/auth/signout",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"auth",
+										"signout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:5000"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, PUT, POST, DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "r_t=; Path=/; HttpOnly"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2b-CfcG7Xu2TMmhg5S9Y7WCkkF7Utk\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 17 Aug 2023 06:14:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"user signedout\"\n}"
+						}
+					]
+				},
+				{
+					"name": "user-validate/otp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \n     \"a_token\":\"\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gramlok}}/auth/user-validate/otp",
+							"host": [
+								"{{gramlok}}"
+							],
+							"path": [
+								"auth",
+								"user-validate",
+								"otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user-validate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \"a_token\":\"\",\n    \"otpToken\":\"\",\n    \"otp\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gramlok}}/auth/user-validate",
+							"host": [
+								"{{gramlok}}"
+							],
+							"path": [
+								"auth",
+								"user-validate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify-signup-otp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\":\"8681910095\",\n    \"otp\":\"5118\",\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvdHAiOjUxMTgsInVzZXJJZCI6Ijg2ODE5MTAwOTUiLCJpYXQiOjE3MDA3MzI1MzAsImV4cCI6MTcwMDczNDMzMH0.Cre2JPO6mPGMxc-_AiyZghwwEB1FQ_OI9wPmbpi6fgQ\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gramlok}}/auth/verify-signup-otp",
+							"host": [
+								"{{gramlok}}"
+							],
+							"path": [
+								"auth",
+								"verify-signup-otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{gramlok}}",
+							"host": [
+								"{{gramlok}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "services",
+			"item": [
+				{
+					"name": "post",
+					"item": [
+						{
+							"name": "user",
+							"item": [
+								{
+									"name": "/services/posts/user/",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlY2E0ZTI5LWZlN2MtNDFiNi04NDZiLTJkNjI5YzE2NmNiNyIsIm5hbWUiOiJrYWx2aW4iLCJpYXQiOjE3MDE0MDU4MjgsImV4cCI6MTcwMTQwOTQyOH0.YQEEU4fIUKdtaL3QajBwFDBWMsl09HP2gi3r7J-4nAM",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{gramlok}}/services/posts/user",
+											"host": [
+												"{{gramlok}}"
+											],
+											"path": [
+												"services",
+												"posts",
+												"user"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlY2E0ZTI5LWZlN2MtNDFiNi04NDZiLTJkNjI5YzE2NmNiNyIsIm5hbWUiOiJrYWx2aW4iLCJpYXQiOjE3MDA3MzQ0NTksImV4cCI6MTcwMDczODA1OX0.GJLU04iabSYwu3Pw_MzOGtYOKOL0dPL-gx1gmjn8I7U",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "postId",
+											"value": "a5a17d01-44f2-4589-82f6-bc3372902381",
+											"description": "SERVICE_WANTED_POST or SERVICE_PROVIDING_POST",
+											"type": "text"
+										},
+										{
+											"key": "strCategoriesIds",
+											"value": "[\"f06513d6-774f-441d-8ecf-faba91c25457\"]",
+											"type": "text"
+										},
+										{
+											"key": "serviceName",
+											"value": "domestic help",
+											"type": "text"
+										},
+										{
+											"key": "postText",
+											"value": "s3 test service 111 final",
+											"type": "text"
+										},
+										{
+											"key": "postImage",
+											"type": "file",
+											"src": "/home/mrrobot/Pictures/samples/uniqueeee.jpg"
+										},
+										{
+											"key": "imageChanged",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "imageDeleted",
+											"value": "false",
+											"type": "text"
+										},
+										{
+											"key": "imageCaption",
+											"value": "kalvin image3",
+											"type": "text"
+										},
+										{
+											"key": "contactAddress",
+											"value": "villukuri",
+											"type": "text"
+										},
+										{
+											"key": "contactPhone",
+											"value": "8681910095",
+											"type": "text"
+										},
+										{
+											"key": "contactEmail",
+											"value": "kalvinbenser369@gmail.com",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{gramlok}}/services/post",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"services",
+										"post"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "SuccessResponse",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "postType",
+													"value": "SERVICE_PROVIDING_POST",
+													"description": "SERVICE_WANTED_POST or SERVICE_PROVIDING_POST",
+													"type": "text"
+												},
+												{
+													"key": "strCategoriesIds",
+													"value": "[\"f06513d6-774f-441d-8ecf-faba91c25457\"]",
+													"type": "text"
+												},
+												{
+													"key": "serviceName",
+													"value": "domestic help",
+													"type": "text"
+												},
+												{
+													"key": "postText",
+													"value": "Need someone for domestic work ",
+													"type": "text"
+												},
+												{
+													"key": "postImage",
+													"type": "file",
+													"src": "/home/kalvin/Pictures/sns2.png"
+												},
+												{
+													"key": "postImageCaption",
+													"value": "simple post",
+													"type": "text"
+												},
+												{
+													"key": "authorId",
+													"value": "51f861ac-3f70-4735-8a78-3c291f3114c1",
+													"type": "text"
+												},
+												{
+													"key": "villageCode",
+													"value": "629180",
+													"type": "text"
+												},
+												{
+													"key": "subdistrictCode",
+													"value": "629001",
+													"type": "text"
+												},
+												{
+													"key": "districtCode",
+													"value": "629702",
+													"type": "text"
+												},
+												{
+													"key": "contactAddress",
+													"value": "villukuri",
+													"type": "text"
+												},
+												{
+													"key": "contactPhone",
+													"value": "8681910095",
+													"type": "text"
+												},
+												{
+													"key": "contactEmail",
+													"value": "kalvinbenser369@gmail.com",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{gramlok}}/services/post",
+											"host": [
+												"{{gramlok}}"
+											],
+											"path": [
+												"services",
+												"post"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "http://localhost:5000"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "GET, PUT, POST, DELETE"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "646"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"286-Gvd+l6m2NbHQpcy9g9OGxh3G0F4\""
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 17 Aug 2023 10:09:04 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": \"59265c3b-e9ff-4459-a949-36090f6d122a\",\n            \"post_type\": \"SERVICE_PROVIDING_POST\",\n            \"author_id\": \"51f861ac-3f70-4735-8a78-3c291f3114c1\",\n            \"village_code\": \"629180\",\n            \"subdist_code\": \"629001\",\n            \"dist_code\": \"629702\",\n            \"categories\": [\n                \"f06513d6-774f-441d-8ecf-faba91c25457\"\n            ],\n            \"service_name\": \"domestic help\",\n            \"post_text\": \"Need someone for domestic work \",\n            \"post_pic\": \"images/services/postImage-1692266944080-876287463-sns2.png\",\n            \"post_pic_caption\": \"simple post\",\n            \"contact_address\": \"villukuri\",\n            \"contact_phone\": \"8681910095\",\n            \"contact_email\": \"kalvinbenser369@gmail.com\",\n            \"posted_on\": \"2023-08-17T10:09:04.696Z\",\n            \"renewed_on\": \"2023-08-17T10:09:04.696Z\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Get post data",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{gramlok}}/services/posts/entity/:entityCode?ptype=\"SERVICE_PROVIDING_POST\"&e_type=\"VILLAGE\"&categories=[\"f06513d6-774f-441d-8ecf-faba91c25457\"]",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"services",
+										"posts",
+										"entity",
+										":entityCode"
+									],
+									"query": [
+										{
+											"key": "ptype",
+											"value": "\"SERVICE_PROVIDING_POST\""
+										},
+										{
+											"key": "e_type",
+											"value": "\"VILLAGE\""
+										},
+										{
+											"key": "categories",
+											"value": "[\"f06513d6-774f-441d-8ecf-faba91c25457\"]"
+										}
+									],
+									"variable": [
+										{
+											"key": "entityCode",
+											"value": "629180"
+										}
+									]
+								},
+								"description": "eType=VILLAGE or SUBDISTRICT or DISTRICT\n\npType=SERVICE_WANTED_POST or SERVICE_PROVIDING_POST\n\nentityCode=code for your entity\n\ncategories=\\[\\]\n\ngive category ids in array"
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlY2E0ZTI5LWZlN2MtNDFiNi04NDZiLTJkNjI5YzE2NmNiNyIsIm5hbWUiOiJrYWx2aW4iLCJpYXQiOjE3MDA3MzQ0NTksImV4cCI6MTcwMDczODA1OX0.GJLU04iabSYwu3Pw_MzOGtYOKOL0dPL-gx1gmjn8I7U",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "postType",
+											"value": "SERVICE_PROVIDING_POST",
+											"description": "SERVICE_WANTED_POST or SERVICE_PROVIDING_POST",
+											"type": "text"
+										},
+										{
+											"key": "strCategoriesIds",
+											"value": "[\"f06513d6-774f-441d-8ecf-faba91c25457\"]",
+											"type": "text"
+										},
+										{
+											"key": "serviceName",
+											"value": "s3 test service final",
+											"type": "text"
+										},
+										{
+											"key": "postText",
+											"value": "s3 test service 11",
+											"type": "text"
+										},
+										{
+											"key": "postImage",
+											"type": "file",
+											"src": "/home/mrrobot/Pictures/samples/uniqueeee.jpg"
+										},
+										{
+											"key": "postImageCaption",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "authorId",
+											"value": "b102ca21-6455-4c2e-af6a-6ec536aa993e",
+											"type": "text"
+										},
+										{
+											"key": "villageCode",
+											"value": "V643130",
+											"type": "text"
+										},
+										{
+											"key": "subdistrictCode",
+											"value": "SD5882",
+											"type": "text"
+										},
+										{
+											"key": "districtCode",
+											"value": "D629",
+											"type": "text"
+										},
+										{
+											"key": "contactAddress",
+											"value": "4-187-b",
+											"type": "text"
+										},
+										{
+											"key": "contactPhone",
+											"value": "8681910095",
+											"type": "text"
+										},
+										{
+											"key": "contactEmail",
+											"value": "kalvinbenser1@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "entityType",
+											"value": "VILLAGE",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{gramlok}}/services/post",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"services",
+										"post"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete post",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImU2ZjY2NzhkLWJhZWYtNGRlNC04NDMyLTBhNDU0ODE4YzIxYyIsIm5hbWUiOiJrYWx2aW4iLCJpYXQiOjE2OTM4OTc2MjMsImV4cCI6MTY5Mzg5OTQyM30.olxqqnEAq83JVn5Ry4XRi9Uja7PFeVLtyvk0__Z05es",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{gramlok}}/services/post/:postId",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"services",
+										"post",
+										":postId"
+									],
+									"variable": [
+										{
+											"key": "postId",
+											"value": "18303ff5-3a71-468e-93a1-64b7ae5e5c67"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "query",
+					"item": [
+						{
+							"name": "Create query",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{gramlok}}/services/query",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"services",
+										"query"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update query",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{gramlok}}/services/query",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"services",
+										"query"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete query",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{gramlok}}/services/query/:queryId",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"services",
+										"query",
+										":queryId"
+									],
+									"variable": [
+										{
+											"key": "queryId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get query",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{gramlok}}/services/queries/:postId",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"services",
+										"queries",
+										":postId"
+									],
+									"variable": [
+										{
+											"key": "postId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "reply",
+					"item": [
+						{
+							"name": "Create reply",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{gramlok}}/services/reply",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"services",
+										"reply"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Reply",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{gramlok}}/replies/:queryId",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"replies",
+										":queryId"
+									],
+									"variable": [
+										{
+											"key": "queryId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update Reply",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{gramlok}}/services/reply",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"services",
+										"reply"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Replay",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{gramlok}}/services/reply/:replyId",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"services",
+										"reply",
+										":replyId"
+									],
+									"variable": [
+										{
+											"key": "replyId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "buysell",
+			"item": [
+				{
+					"name": "post",
+					"item": [
+						{
+							"name": "user",
+							"item": [
+								{
+									"name": "/buysell/posts/user",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlY2E0ZTI5LWZlN2MtNDFiNi04NDZiLTJkNjI5YzE2NmNiNyIsIm5hbWUiOiJrYWx2aW4iLCJpYXQiOjE3MDE0MTI3NjYsImV4cCI6MTcwMTQxNjM2Nn0.23AGDd959kZ5aSup0-dkVnaqqecZ2BfEGbiLhWK2EtY",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{gramlok}}/buysell/posts/user",
+											"host": [
+												"{{gramlok}}"
+											],
+											"path": [
+												"buysell",
+												"posts",
+												"user"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Get post",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{gramlok}}/buysell/posts/entity/:entityCode",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"buysell",
+										"posts",
+										"entity",
+										":entityCode"
+									],
+									"variable": [
+										{
+											"id": 0,
+											"key": "entityCode",
+											"value": "V220301"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create post",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlY2E0ZTI5LWZlN2MtNDFiNi04NDZiLTJkNjI5YzE2NmNiNyIsIm5hbWUiOiJrYWx2aW4iLCJpYXQiOjE3MDA3MzQ0NTksImV4cCI6MTcwMDczODA1OX0.GJLU04iabSYwu3Pw_MzOGtYOKOL0dPL-gx1gmjn8I7U",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "postType",
+											"value": "BUY_POST",
+											"type": "text"
+										},
+										{
+											"key": "strCategoriesIds",
+											"value": "[\"f06513d6-774f-441d-8ecf-faba91c25457\"]",
+											"type": "text"
+										},
+										{
+											"key": "itemName",
+											"value": "image1",
+											"type": "text"
+										},
+										{
+											"key": "postText",
+											"value": "s3 test post 2",
+											"type": "text"
+										},
+										{
+											"key": "postImageCaption",
+											"value": "image 1",
+											"type": "text"
+										},
+										{
+											"key": "authorId",
+											"value": "b102ca21-6455-4c2e-af6a-6ec536aa993e",
+											"type": "text"
+										},
+										{
+											"key": "villageCode",
+											"value": "V643130",
+											"type": "text"
+										},
+										{
+											"key": "subdistrictCode",
+											"value": "SD5882",
+											"type": "text"
+										},
+										{
+											"key": "districtCode",
+											"value": "D629",
+											"type": "text"
+										},
+										{
+											"key": "contactAddress",
+											"value": "test address",
+											"type": "text"
+										},
+										{
+											"key": "contactPhone",
+											"value": "8681910095",
+											"type": "text"
+										},
+										{
+											"key": "contactEmail",
+											"value": "kalvinbenser1@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "postImage",
+											"type": "file",
+											"src": "/home/mrrobot/Pictures/samples/test3.jpg"
+										},
+										{
+											"key": "entityType",
+											"value": "VILLAGE",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{gramlok}}/buysell/post",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"buysell",
+										"post"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update post",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlY2E0ZTI5LWZlN2MtNDFiNi04NDZiLTJkNjI5YzE2NmNiNyIsIm5hbWUiOiJrYWx2aW4iLCJpYXQiOjE3MDA3MzQ0NTksImV4cCI6MTcwMDczODA1OX0.GJLU04iabSYwu3Pw_MzOGtYOKOL0dPL-gx1gmjn8I7U",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "postId",
+											"value": "d316f681-cb39-4d38-9fda-7365bfec35c5",
+											"type": "text"
+										},
+										{
+											"key": "strCategoriesIds",
+											"value": "[\"f06513d6-774f-441d-8ecf-faba91c25457\"]",
+											"type": "text"
+										},
+										{
+											"key": "itemName",
+											"value": "item 11",
+											"type": "text"
+										},
+										{
+											"key": "postText",
+											"value": "test post 11",
+											"type": "text"
+										},
+										{
+											"key": "imageChanged",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "imageDeleted",
+											"value": "false",
+											"type": "text"
+										},
+										{
+											"key": "imageCaption",
+											"value": "test image1 final",
+											"type": "text"
+										},
+										{
+											"key": "contactAddress",
+											"value": "test address",
+											"type": "text"
+										},
+										{
+											"key": "contactPhone",
+											"value": "8681910095",
+											"type": "text"
+										},
+										{
+											"key": "contactEmail",
+											"value": "kalvinbenser1@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "postImage",
+											"type": "file",
+											"src": "/home/mrrobot/Pictures/Safeimagekit-resized-img.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{gramlok}}/buysell/post",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"buysell",
+										"post"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete post",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{gramlok}}/buysell/post/:postId",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"buysell",
+										"post",
+										":postId"
+									],
+									"variable": [
+										{
+											"key": "postId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "query",
+					"item": [
+						{
+							"name": "Get query",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{gramlok}}/buysell/queries/:postId",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"buysell",
+										"queries",
+										":postId"
+									],
+									"variable": [
+										{
+											"key": "postId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete query",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{gramlok}}/buysell/query/:queryId",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"buysell",
+										"query",
+										":queryId"
+									],
+									"variable": [
+										{
+											"key": "queryId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create query",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{gramlok}}/buysell/query",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"buysell",
+										"query"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update query",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{gramlok}}/buysell/query",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"buysell",
+										"query"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "reply",
+					"item": [
+						{
+							"name": "Get reply",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{gramlok}}/buysell/replies/:queryId",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"buysell",
+										"replies",
+										":queryId"
+									],
+									"variable": [
+										{
+											"key": "queryId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete reply",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{gramlok}}/buysell/reply/:replyId",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"buysell",
+										"reply",
+										":replyId"
+									],
+									"variable": [
+										{
+											"key": "replyId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create reply",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{gramlok}}/buysell/reply",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"buysell",
+										"reply"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update reply",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{gramlok}}/buysell/reply",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"buysell",
+										"reply"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "profile-old",
+			"item": [
+				{
+					"name": "panchayat member",
+					"item": [
+						{
+							"name": "create panchayat member",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"benser\",\n    \"village_code\":\"629189\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{gramlok}}/profile/village/panchayat_members",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"profile",
+										"village",
+										"panchayat_members"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get panchayat member",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{gramlok}}/profile/village/panchayat_members/:village_code",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"profile",
+										"village",
+										"panchayat_members",
+										":village_code"
+									],
+									"variable": [
+										{
+											"key": "village_code",
+											"value": "629189"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update panchayat member",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"name\":\"kalvin\"\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{gramlok}}/profile/village/panchayat_members/:id",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"profile",
+										"village",
+										"panchayat_members",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "bf721a82-3a97-49b3-bc28-53987c972e54"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete panchayat member",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{gramlok}}/profile/village/panchayat_members/:id",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"profile",
+										"village",
+										"panchayat_members",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "bf721a82-3a97-49b3-bc28-53987c972e54"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "industries",
+					"item": [
+						{
+							"name": "get Industries Types",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{gramlok}}/profile/village/industries-types",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"profile",
+										"village",
+										"industries-types"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Industries Types",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"Electronics\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{gramlok}}/profile/village/industries-types",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"profile",
+										"village",
+										"industries-types"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Industries Types",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"Entertainment\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{gramlok}}/profile/village/industries-types/:id",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"profile",
+										"village",
+										"industries-types",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "44f2db61-aabc-4384-b53e-a31dd157be50"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Industries",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name_of_industries\":\"kalvin Entertainment Company\",\n    \"phone_number\":8681910095,\n    \"address\":\"test\",\n    \"type_id\":\"e73a2c0a-266e-411f-9d1a-efe2268838d5\",\n    \"village_code\":\"629180\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{gramlok}}/profile/village/industries",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"profile",
+										"village",
+										"industries"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get Industries",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{gramlok}}/profile/village/industries/:village_code",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"profile",
+										"village",
+										"industries",
+										":village_code"
+									],
+									"variable": [
+										{
+											"key": "village_code",
+											"value": "629180"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Industries",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name_of_industries\":\"vaibhav Entertainment Company1\",\n    \"phone_number\":8681910095,\n    \"address\":\"test\",\n    \"type_id\":\"44f2db61-aabc-4384-b53e-a31dd157be50\",\n    \"village_code\":\"629180\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{gramlok}}/profile/village/industries/:id",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"profile",
+										"village",
+										"industries",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "cdf0b6bf-0cba-42a3-945f-83ef3eb1fbb6"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Industries",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{gramlok}}/profile/village/industries/:id",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"profile",
+										"village",
+										"industries",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "cdf0b6bf-0cba-42a3-945f-83ef3eb1fbb6"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Education",
+					"item": [
+						{
+							"name": "Create Education",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name_of_institute\":\"public school123\",\n    \"phone_number\":86181910095,\n    \"address\":\"villukuri\",\n    \"village_code\":629180\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{gramlok}}/profile/village/education",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"profile",
+										"village",
+										"education"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Education",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{gramlok}}/profile/village/education/:village_code",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"profile",
+										"village",
+										"education",
+										":village_code"
+									],
+									"variable": [
+										{
+											"key": "village_code",
+											"value": "629180"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Education",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{gramlok}}/profile/village/education/:id",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"profile",
+										"village",
+										"education",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5e673688-c590-4fda-92cd-cd5da34cb268"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Education",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name_of_institute\":\"Kalvin NEET Training Centre2\",\n    \"phone_number\":86181910095,\n    \"address\":\"villukuri\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{gramlok}}/profile/village/education/:id",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"profile",
+										"village",
+										"education",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "eea98b1f-8630-4001-a770-da4086b5a356"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Religious",
+					"item": [
+						{
+							"name": "Add Religious",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name_of_place\":\"church1\",\n    \"address\":\"villukuri\",\n    \"village_code\":629180\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{gramlok}}/profile/village/religious",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"profile",
+										"village",
+										"religious"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Religious",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name_of_place\":\"st stebastian church\",\n    \"address\":\"villukuri\",\n    \"village_code\":629180\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{gramlok}}/profile/village/religious/:id",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"profile",
+										"village",
+										"religious",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "f74721c1-6821-4ceb-b502-851a936be242"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Religious",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{gramlok}}/profile/village/religious/:id",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"profile",
+										"village",
+										"religious",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "f74721c1-6821-4ceb-b502-851a936be242"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get Religious",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{gramlok}}/profile/village/religious/:village_code",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"profile",
+										"village",
+										"religious",
+										":village_code"
+									],
+									"variable": [
+										{
+											"key": "village_code",
+											"value": "629180"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "basic-info",
+					"item": [
+						{
+							"name": "create basic-info",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"latitude\": \"12.455\",\n    \"longitude\": \"94.44\",\n    \"assembly\": \"mla\",\n    \"parliament\": \"mla\",\n    \"police_station\": \"tnps\",\n    \"near_railway_station\": \"rail\",\n    \"nearest_town\": \"villukuri\",\n    \"village_code\": \"629180\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{gramlok}}/profile/village/basic-info",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"profile",
+										"village",
+										"basic-info"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get basic-info",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{gramlok}}/profile/village/basic-info/:village_code",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"profile",
+										"village",
+										"basic-info",
+										":village_code"
+									],
+									"variable": [
+										{
+											"key": "village_code",
+											"value": "629180"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update basic-info",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": \"c4b68aee-dd94-45d1-91c7-2a26a2cab6c8\",\n    \"village_code\": \"629180\",\n    \"latitude\": \"12.455\",\n    \"longitude\": \"94.44\",\n    \"assembly\": \"mla1\",\n    \"parliament\": \"mla1\",\n    \"police_station\": \"tnps\",\n    \"near_railway_station\": \"rail\",\n    \"near_town\": \"villukuri\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{gramlok}}/profile/village/basic-info/:id",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"profile",
+										"village",
+										"basic-info",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "c4b68aee-dd94-45d1-91c7-2a26a2cab6c8"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "health",
+					"item": [
+						{
+							"name": "Create health",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"Dhasan hospital\",\n    \"phone\":\"8677383399\",\n    \"address\":\"villukuri\",\n    \"village_code\":629180\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{gramlok}}/profile/village/health",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"profile",
+										"village",
+										"health"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Health",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{gramlok}}/profile/village/health/:village_code",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"profile",
+										"village",
+										"health",
+										":village_code"
+									],
+									"variable": [
+										{
+											"key": "village_code",
+											"value": "629180"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update health",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\":\"Dhasan hospital1\",\n    \"phone\":\"8677383399\",\n    \"address\":\"villukuri\",\n    \"village_code\":629180\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{gramlok}}/profile/village/health/:id",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"profile",
+										"village",
+										"health",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "35850f7c-22af-4abb-8a35-a869012faf0b"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Health",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{gramlok}}/profile/village/health/:id",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"profile",
+										"village",
+										"health",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "35850f7c-22af-4abb-8a35-a869012faf0b"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "otp",
+			"item": [
+				{
+					"name": "verify-otp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvdHAiOjEyMDAsImlhdCI6MTY5Mzc5OTg4MiwiZXhwIjoxNjkzODAxNjgyfQ.Z_VuXxYE7RTpUIMIwOPbZnISIkhZSFdVLHlS_F5VGjg\",\n    \"otp\":\"1200\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/verify-otp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"verify-otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send-otp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"numbers\" : \"8681910095\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/send-otp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"send-otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fast2sms",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "t4TTPDT7fgaweP1XjafZCld3YjK01Rl4M79wxCUEn09XRax7WOPEWzsU1N67",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n\n{\n\"route\" : \"otp\",\n\"variables_values\" : \"5599\",\n\"numbers\" : \"8681910095\"\n\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://www.fast2sms.com/dev/bulkV2",
+							"protocol": "https",
+							"host": [
+								"www",
+								"fast2sms",
+								"com"
+							],
+							"path": [
+								"dev",
+								"bulkV2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profile_old1",
+			"item": [
+				{
+					"name": "Get All Profile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{gramlok}}/entities/profile/village",
+							"host": [
+								"{{gramlok}}"
+							],
+							"path": [
+								"entities",
+								"profile",
+								"village"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{gramlok}}/entities/profile/village/:entity_code/:type/:id",
+							"host": [
+								"{{gramlok}}"
+							],
+							"path": [
+								"entities",
+								"profile",
+								"village",
+								":entity_code",
+								":type",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "entity_code",
+									"value": "LL89J23"
+								},
+								{
+									"key": "type",
+									"value": "ADDITIONAL_INFO"
+								},
+								{
+									"key": "id",
+									"value": "533ee8b2-2d69-4d59-93a6-64da93afdd1d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Profile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\":\"PANCHAYAT_MEMBER\",\n    \"entity_code\":\"629180\",\n    \"data\":  {\n            \"name\": \"member3\",\n            \"gender\": \"male\",\n            \"email\": \"kalvinbenser1@gmail.com\",\n            \"phone_number\": 8681910095,\n            \"designation\":\"VAO\",\n            \"profile_pic\":{\n        \"fileName\": \"\",\n        \"sizes\": {\n            \"small\": \"64x64\",\n            \"medium\": \"128x128\"\n        }\n    },\n            \"from_date\": \"2023-09-06\",\n            \"to_date\": \"2023-09-07\"\n        }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gramlok}}/entities/profile/village",
+							"host": [
+								"{{gramlok}}"
+							],
+							"path": [
+								"entities",
+								"profile",
+								"village"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Profile",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\":\"PANCHAYAT_MEMBER\",\n    \"entity_code\":\"629180\",\n    \"data\":  {\n            \"name\": \"benser\",\n            \"gender\": \"male\",\n            \"email\": \"kalvinbenser1@gmail.com\",\n            \"phone_number\": 8681910095,\n            \"designation\":\"VAO\",\n            \"profile_pic\":{\n            \"fileName\": \"image-1696955378813-658081635-Screenshot from 2023-10-07 18-56-51.jpg\",\n            \"sizes\": {\n            \"small\": \"64x64\",\n            \"medium\": \"128x128\"\n             }\n         },\n            \"from_date\": \"2023-09-06\",\n            \"to_date\": \"2023-09-07\"\n        }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gramlok}}/entities/profile/village/:id",
+							"host": [
+								"{{gramlok}}"
+							],
+							"path": [
+								"entities",
+								"profile",
+								"village",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "46410ad2-1f0a-425a-a3ab-e28b4509259b"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Profile",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"body_type\": \"PANCHAYAT_MEMBER\",\n    \"village_code\": 629180,\n    \"data\": [\n     \n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gramlok}}/entities/profile/village/:entity_code/:type/:id",
+							"host": [
+								"{{gramlok}}"
+							],
+							"path": [
+								"entities",
+								"profile",
+								"village",
+								":entity_code",
+								":type",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "entity_code",
+									"value": "MU91"
+								},
+								{
+									"key": "type",
+									"value": "EDUCATION"
+								},
+								{
+									"key": "id",
+									"value": "7f3590d1-9d08-436d-a569-9a987b23e5ad"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload Image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/mrrobot/Pictures/samples/test3.jpg"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{gramlok}}/entities/profile/village/upload/image",
+							"host": [
+								"{{gramlok}}"
+							],
+							"path": [
+								"entities",
+								"profile",
+								"village",
+								"upload",
+								"image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Profile Data By entity_code",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{gramlok}}/entities/profile/village/:entity_code",
+							"host": [
+								"{{gramlok}}"
+							],
+							"path": [
+								"entities",
+								"profile",
+								"village",
+								":entity_code"
+							],
+							"query": [
+								{
+									"key": null,
+									"value": "",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "entity_code",
+									"value": "600028"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "putVillageProfile",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"is_edited\":true,\n    \"type\":\"ADDITIONAL_INFO\",\n    \"entity_code\":\"600028\",\n     \"data\": {\n        \"assembly\": \"Gokul\",\n        \"parliament\": \"test\",\n        \"near_town\": \"villukuri\",\n        \"near_railway_station\": \"test123\",\n        \"police_station\": \"test\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gramlok}}/entities/profile/village",
+							"host": [
+								"{{gramlok}}"
+							],
+							"path": [
+								"entities",
+								"profile",
+								"village"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "news",
+			"item": [
+				{
+					"name": "posts",
+					"item": [
+						{
+							"name": "share",
+							"item": [
+								{
+									"name": "/news/post/share",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"parentPostId\":\"\",\n    \"postText\":\"\",\n    \"entityCode\":\"\",\n    \"entityType\":\"\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{gramlok}}/news/post/share",
+											"host": [
+												"{{gramlok}}"
+											],
+											"path": [
+												"news",
+												"post",
+												"share"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "/post/share/level",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{gramlok}}/post/share/level",
+											"host": [
+												"{{gramlok}}"
+											],
+											"path": [
+												"post",
+												"share",
+												"level"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "create post",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlY2E0ZTI5LWZlN2MtNDFiNi04NDZiLTJkNjI5YzE2NmNiNyIsIm5hbWUiOiJrYWx2aW4iLCJpYXQiOjE3MDA3MzQ0NTksImV4cCI6MTcwMDczODA1OX0.GJLU04iabSYwu3Pw_MzOGtYOKOL0dPL-gx1gmjn8I7U",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "news test 11 final 1",
+											"type": "text"
+										},
+										{
+											"key": "text",
+											"value": "news test 11 final",
+											"type": "text"
+										},
+										{
+											"key": "imageCaption",
+											"value": "estt",
+											"type": "text"
+										},
+										{
+											"key": "entityType",
+											"value": "VILLAGE",
+											"type": "text"
+										},
+										{
+											"key": "villageCode",
+											"value": "V643130",
+											"type": "text"
+										},
+										{
+											"key": "subdistrictCode",
+											"value": "SD5882",
+											"type": "text"
+										},
+										{
+											"key": "districtCode",
+											"value": "D629",
+											"type": "text"
+										},
+										{
+											"key": "stateCode",
+											"value": "33",
+											"type": "text"
+										},
+										{
+											"key": "authorId",
+											"value": "5eca4e29-fe7c-41b6-846b-2d629c166cb7",
+											"type": "text"
+										},
+										{
+											"key": "postImage",
+											"type": "file",
+											"src": "/home/mrrobot/Pictures/Safeimagekit-resized-img.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{gramlok}}/news/post",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"news",
+										"post"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update post",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlY2E0ZTI5LWZlN2MtNDFiNi04NDZiLTJkNjI5YzE2NmNiNyIsIm5hbWUiOiJrYWx2aW4iLCJpYXQiOjE3MDA3MzQ0NTksImV4cCI6MTcwMDczODA1OX0.GJLU04iabSYwu3Pw_MzOGtYOKOL0dPL-gx1gmjn8I7U",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "newsId",
+											"value": "0edbd290-adb1-4ae1-9695-a1267135c8b2",
+											"type": "text"
+										},
+										{
+											"key": "titleChanged",
+											"value": "false",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "title",
+											"value": "dfefw",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "textChanged",
+											"value": "false",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "text",
+											"value": "rrtert",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "imageChanged",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "postImage",
+											"type": "file",
+											"src": "/home/mrrobot/Pictures/samples/remove.jpg"
+										},
+										{
+											"key": "imageCaption",
+											"value": "news test post 212",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{gramlok}}/news/item",
+									"host": [
+										"{{gramlok}}"
+									],
+									"path": [
+										"news",
+										"item"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "entities",
+			"item": [
+				{
+					"name": "posts",
+					"item": []
+				},
+				{
+					"name": "coverPicture",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImIxMDJjYTIxLTY0NTUtNGMyZS1hZjZhLTZlYzUzNmFhOTkzZSIsIm5hbWUiOiJrYWx2aW4iLCJpYXQiOjE3MDA1MDAxNzEsImV4cCI6MTcwMDUwMzc3MX0.gqCaesSnga2AvxaMnGVk7cqigI-rmV9riNQxU0DBd18",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "entityId",
+									"value": "V643130",
+									"type": "text"
+								},
+								{
+									"key": "userUid",
+									"value": "b102ca21-6455-4c2e-af6a-6ec536aa993e",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/mrrobot/Pictures/samples/pexels-math-90946.jpg"
+								},
+								{
+									"key": "imageCaption",
+									"value": "entities 123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{gramlok}}/entities/cover-pic",
+							"host": [
+								"{{gramlok}}"
+							],
+							"path": [
+								"entities",
+								"cover-pic"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "activities",
+			"item": [
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlY2E0ZTI5LWZlN2MtNDFiNi04NDZiLTJkNjI5YzE2NmNiNyIsIm5hbWUiOiJrYWx2aW4iLCJpYXQiOjE3MDA3MzE3MzcsImV4cCI6MTcwMDczNTMzN30.HCYc2MVRDWh0isLk6dIOgpSLOsmeKt7g6qeDDQ0DcZk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "titleChanged",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "activites 123",
+									"type": "text"
+								},
+								{
+									"key": "textChanged",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "text",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "imageChanged",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "postImage",
+									"type": "file",
+									"src": "/home/mrrobot/Pictures/Safeimagekit-resized-img.jpg"
+								},
+								{
+									"key": "captionChanged",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "imageCaption",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "postId",
+									"value": "27fff345-f931-458b-babe-59f6ece89aac",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{gramlok}}/activities/post",
+							"host": [
+								"{{gramlok}}"
+							],
+							"path": [
+								"activities",
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlY2E0ZTI5LWZlN2MtNDFiNi04NDZiLTJkNjI5YzE2NmNiNyIsIm5hbWUiOiJrYWx2aW4iLCJpYXQiOjE3MDA3MzE3MzcsImV4cCI6MTcwMDczNTMzN30.HCYc2MVRDWh0isLk6dIOgpSLOsmeKt7g6qeDDQ0DcZk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "tomorrow power cut in kanyakumari",
+									"type": "text"
+								},
+								{
+									"key": "text",
+									"value": "tomorrow power cut in kanyakumari",
+									"type": "text"
+								},
+								{
+									"key": "imageCaption",
+									"value": "post 3",
+									"type": "text"
+								},
+								{
+									"key": "entityType",
+									"value": "VILLAGE",
+									"type": "text"
+								},
+								{
+									"key": "entityCode",
+									"value": "V643130",
+									"type": "text"
+								},
+								{
+									"key": "authorId",
+									"value": "b102ca21-6455-4c2e-af6a-6ec536aa993e",
+									"type": "text"
+								},
+								{
+									"key": "postImage",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{gramlok}}/activities/post",
+							"host": [
+								"{{gramlok}}"
+							],
+							"path": [
+								"activities",
+								"post"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "notification",
+			"item": [
+				{
+					"name": "get api",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{gramlok}}/notification/get_notification/:user_uid",
+							"host": [
+								"{{gramlok}}"
+							],
+							"path": [
+								"notification",
+								"get_notification",
+								":user_uid"
+							],
+							"variable": [
+								{
+									"key": "user_uid",
+									"value": "c86e2e85-0c29-428d-87af-43627157e1fa"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{gramlok}}/notification/read_notification/df01f404-3ebd-4b4c-bf06-579cc84210a2",
+							"host": [
+								"{{gramlok}}"
+							],
+							"path": [
+								"notification",
+								"read_notification",
+								"df01f404-3ebd-4b4c-bf06-579cc84210a2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "seen",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"idArray\":[\"f2277deb-d691-438b-8923-d6aee13f179c\",\"f77a3a17-190b-4888-8230-916d703a1bbb\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{gramlok}}/notification/seen_notification",
+							"host": [
+								"{{gramlok}}"
+							],
+							"path": [
+								"notification",
+								"seen_notification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "test",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{gramlok}}/notification/test/:user_uid",
+							"host": [
+								"{{gramlok}}"
+							],
+							"path": [
+								"notification",
+								"test",
+								":user_uid"
+							],
+							"variable": [
+								{
+									"key": "user_uid",
+									"value": "c86e2e85-0c29-428d-87af-43627157e1fa"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "cover-pic",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlY2E0ZTI5LWZlN2MtNDFiNi04NDZiLTJkNjI5YzE2NmNiNyIsIm5hbWUiOiJrYWx2aW4iLCJpYXQiOjE3MDA3MzQ0NTksImV4cCI6MTcwMDczODA1OX0.GJLU04iabSYwu3Pw_MzOGtYOKOL0dPL-gx1gmjn8I7U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/mrrobot/Pictures/Safeimagekit-resized-img.jpg"
+								},
+								{
+									"key": "caption",
+									"value": "cover pic final",
+									"type": "text"
+								},
+								{
+									"key": "userUid",
+									"value": "5eca4e29-fe7c-41b6-846b-2d629c166cb7",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{gramlok}}/user/cover-pic",
+							"host": [
+								"{{gramlok}}"
+							],
+							"path": [
+								"user",
+								"cover-pic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profile-pic",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlY2E0ZTI5LWZlN2MtNDFiNi04NDZiLTJkNjI5YzE2NmNiNyIsIm5hbWUiOiJrYWx2aW4iLCJpYXQiOjE3MDA3MzQ0NTksImV4cCI6MTcwMDczODA1OX0.GJLU04iabSYwu3Pw_MzOGtYOKOL0dPL-gx1gmjn8I7U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/mrrobot/Pictures/samples/uniqueeee.jpg"
+								},
+								{
+									"key": "caption",
+									"value": "profile pic final",
+									"type": "text"
+								},
+								{
+									"key": "userUid",
+									"value": "5eca4e29-fe7c-41b6-846b-2d629c166cb7",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{gramlok}}/user/profile-pic",
+							"host": [
+								"{{gramlok}}"
+							],
+							"path": [
+								"user",
+								"profile-pic"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "test",
+			"item": [
+				{
+					"name": "test",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/mrrobot/Pictures/samples/test3.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{gramlok}}/test",
+							"host": [
+								"{{gramlok}}"
+							],
+							"path": [
+								"test"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "profile",
+			"item": [
+				{
+					"name": "/profile/village",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "/profile/village",
+							"path": [
+								"profile",
+								"village"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/profile/village",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "/profile/village",
+							"path": [
+								"profile",
+								"village"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{gramlok}}/",
+					"host": [
+						"{{gramlok}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "gramlok",
+			"value": "localhost:3000"
+		},
+		{
+			"key": "gramlok",
+			"value": "http://143.110.184.51",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "gramlok",
+			"value": "http://164.52.205.211",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}
